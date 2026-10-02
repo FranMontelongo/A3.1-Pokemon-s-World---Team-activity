@@ -1,14 +1,15 @@
-let musica = document.getElementById("musica");
-let boton = document.getElementById("botonMusica");
+// Encuesta Pokémon
+const form = document.querySelector('.form-encuesta');
+const resultado = document.querySelector('.resultado');
+const tipoElegido = document.getElementById('tipoElegido');
 
-boton.addEventListener("click", function () {
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    if (musica.paused) {
-        musica.play();
-        boton.textContent = "⏸ Música";
-    } else {
-        musica.pause();
-        boton.textContent = "▶ Música";
+    const seleccionado = document.querySelector('input[name="tipo"]:checked');
+
+    if (seleccionado) {
+        tipoElegido.textContent = seleccionado.value;
+        resultado.style.display = 'block';
     }
-
 });
