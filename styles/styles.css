@@ -164,6 +164,10 @@ main p {
     text-align: center;
 }
 
+.destacado h4 {
+    text-align: center;
+}
+
 .destacado p,
 .encuesta p {
     font-size: 13px;
@@ -224,4 +228,14 @@ footer {
     padding: 20px;
     margin-top: 20px;
     font-size: 12px;
+}
+
+/* VIDEO */
+
+.video video {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
 }
